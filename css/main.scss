@@ -1,0 +1,761 @@
+.hidden {
+    display: none;
+}
+
+$jBlack: #1d1d1d;
+
+h1 {
+    font-family: 'Montserrat', 'Helvetica', 'Arial', sans-serif;
+    font-size: 48px;
+    font-weight:600;
+}
+
+h2 {
+    font-family: 'Montserrat', 'Helvetica', 'Arial', sans-serif;
+    font-size: 36px;
+    font-weight: 400;
+}
+
+h3 {
+    font-family: 'Work Sans', 'Helvetica', sans-serif;
+    font-size: 28px;
+    font-weight: 500;
+}
+
+h4 {
+    font-family: 'Work Sans', 'Helvetica', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #fff;
+}
+
+h5, h6, body {
+    font-family: 'Montserrat', 'Helvetica', sans-serif;
+}
+
+body {
+    background-color: #000;
+    font-size: 16px;
+    font-weight: 300;
+    color: #fff;
+}
+
+a {
+    text-decoration: none;
+    color: $jBlack;
+}
+
+footer {
+    height: 150px;
+    max-width: 100%;
+    overflow: hidden;
+    background-color: #000;
+}
+
+.footer-nav {
+    list-style: none;
+    display: inline-flex;
+}
+
+#mainContainer {
+    position: absolute;
+    top: 0px;
+    left: 0;
+    margin: 0 auto;
+}
+
+#videoHeader {
+    margin: 0;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+#logoCon {
+    max-width: 25%;
+    z-index: 1;
+}
+
+.logo {
+    position: relative;
+    top: 0px;
+}
+
+.nav {
+    list-style: none;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+}
+
+#videoCon {
+    display: flex;
+    margin: 0;
+}
+
+video {
+    width: 100%;
+}
+
+#video-bg {
+    max-height: 100%;
+    object-fit: cover;
+}
+
+#audioCon {
+    height: 100px;
+    width: auto;
+}
+
+#hamButton {
+    width: 50px;
+    height: 50px;
+    background: url('../media/images/menu-icon-dark.svg');
+}
+
+
+@media screen and (max-width: 600px) {
+    
+    #mainContainer {
+        max-width: 600px;
+    }
+    
+    #videoCon {
+        height: 736px;
+        margin: 0;
+        
+    }
+    
+    #audioCon {
+    height: 100px;
+    width: auto;
+    }
+    
+    #logoCon {
+        position: absolute;
+        top: 40%;
+        left: 25%;
+        right: auto;
+    }
+    
+    #webLinks {
+        display: none;
+    }
+    
+    #waves {
+        width: 200px;
+    }
+    
+    #hamButton {
+        position: fixed;
+        bottom: 10%;
+        right: 5%;
+        z-index: 999;
+    }
+    
+    #mainNav {
+        position: fixed;
+        top: 100px;
+        right: 0;
+        width: 80%;
+        z-index: 999;
+        opacity: 0.8;
+    }
+    
+    #mainNav button{
+        background: url('../media/images/menu-icon-dark.svg') center no-repeat;
+        border: none;
+        width: 40px;
+        height: 40px;
+        transition: all 400ms ease;
+        margin: 0; 
+    }
+
+    #mainNav a {
+        background-color: #000;
+        display: block;
+        color: #fff;
+        padding: 10px 0 10px 0;
+        text-align: center;
+    }
+
+    #mainNav li {
+        border-bottom: none;
+    }
+
+    #mainNav li:first-child {
+        border-top: none;
+    }
+
+    #mainNav li:last-child {
+        margin-bottom: 10px;
+    }
+
+    #mainNav li a:hover {
+        background-color: #181818;
+    }
+
+    #mainNav ul{
+        margin-top: 50px;
+        display: none;
+    }
+
+    //JS kicks in
+    #mainNav ul.slideToggle {
+        display: block;
+    }
+
+    #mainNav button.expanded {
+        -webkit-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+        transform: rotate(90deg);
+    }
+
+    
+    .imgArtists{
+        width: 100px;
+        height: 100px;
+    }
+
+    
+    #artists {
+        height: 2300px;
+        max-width: 100%;
+//        margin: 0px 8% -1em;
+        background: linear-gradient(90deg, #d53369 0%, #daae51 100%)
+    }
+    
+    #artistsCon {
+        margin: 0px 13% -1em;
+        width: 60%;
+        height: 800px;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 350px 350px 350px 350px;
+        grid-row-gap: 25%;
+        grid-column-gap: 15%;
+    }
+    
+    #releases {
+        height: 1160px;
+        max-width: 80%;
+        margin: 0px 8% -1em;
+    }
+    
+    #releasesCon{
+        margin: 45px 6% -1em;
+        width: 80%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        grid-row-gap: 1%;
+        grid-column-gap: 6%;
+    }
+    
+    .albumCon {
+    max-width: 19vh;
+    }
+    
+    #about {
+        height: 560px;
+        max-width: 100%;
+        margin: 0px 8% -1em;
+    }
+    
+    #aboutCon{
+    margin: 45px 6% -1em;
+    width: 80%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 3fr;
+    grid-row-gap: 5%;
+    grid-column-gap: 10%;
+}
+    
+    #aboutImg {
+        max-width: 25vh;
+    }
+    
+    .hAlign {
+        margin-left: 12%;
+        padding-top: 30px;
+    }
+    
+    footer {
+        display: flex;
+        justify-content: flex-start;    
+        height: 150px;
+        max-width: 100%;
+        overflow: hidden;
+        background-color: $jBlack;
+    }
+
+    .footer-nav { 
+        display: none;
+    }
+    
+    #footerLogo {
+        position: absolute;
+        top: 0;
+        max-width: 12vh;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    
+    #mainContainer {
+        max-width: 600px;
+    }
+    
+    #videoCon {
+        height: 736px;
+        margin: 0;
+        
+    }
+    
+    #audioCon {
+    height: 100px;
+    width: auto;
+    }
+    
+    #logoCon {
+        position: absolute;
+        top: 40%;
+        left: 25%;
+        right: auto;
+    }
+    
+    #webLinks {
+        display: none;
+    }
+    
+    #waves {
+        width: 200px;
+    }
+    
+    #hamButton {
+        position: fixed;
+        bottom: 10%;
+        right: 5%;
+        z-index: 999;
+    }
+    
+    #mainNav {
+        position: fixed;
+        top: 100px;
+        right: 0;
+        width: 80%;
+        z-index: 999;
+        opacity: 0.8;
+    }
+    
+    #mainNav button{
+        background: url('../media/images/menu-icon-dark.svg') center no-repeat;
+        border: none;
+        width: 40px;
+        height: 40px;
+        transition: all 400ms ease;
+        margin: 0; 
+    }
+
+    #mainNav a {
+        background-color: #000;
+        display: block;
+        color: #fff;
+        padding: 10px 0 10px 0;
+        text-align: center;
+    }
+
+    #mainNav li {
+        border-bottom: none;
+    }
+
+    #mainNav li:first-child {
+        border-top: none;
+    }
+
+    #mainNav li:last-child {
+        margin-bottom: 10px;
+    }
+
+    #mainNav li a:hover {
+        background-color: #181818;
+    }
+
+    #mainNav ul{
+        margin-top: 50px;
+        display: none;
+    }
+
+    //JS kicks in
+    #mainNav ul.slideToggle {
+        display: block;
+    }
+
+    #mainNav button.expanded {
+        -webkit-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+        transform: rotate(90deg);
+    }
+
+    
+    .imgArtists{
+        width: 150px;
+        height: 150px;
+    }
+
+    
+    #artists {
+        height: 2160px;
+        max-width: 100%;
+//        margin: 0px 8% -1em;
+        background: linear-gradient(90deg, #d53369 0%, #daae51 100%)
+    }
+    
+    #artistsCon {
+        margin: 0px 13% -1em;
+        width: 60%;
+        height: 800px;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 350px 350px 350px 350px;
+        grid-row-gap: 20%;
+        grid-column-gap: 15%;
+    }
+    
+    #releases {
+        height: 1460px;
+        max-width: 80%;
+        margin: 0px 8% -1em;
+    }
+    
+    #releasesCon{
+        margin: 45px 6% -1em;
+        width: 80%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        grid-row-gap: 1%;
+        grid-column-gap: 6%;
+    }
+    
+    .albumCon {
+    max-width: 25vh;
+    }
+    
+    #about {
+        height: 560px;
+        max-width: 100%;
+        margin: 0px 8% -1em;
+    }
+    
+    #aboutCon{
+    margin: 45px 6% -1em;
+    width: 80%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 3fr;
+    grid-row-gap: 5%;
+    grid-column-gap: 10%;
+}
+    
+    #aboutImg {
+        max-width: 25vh;
+    }
+    
+    .hAlign {
+        margin-left: 12%;
+        padding-top: 30px;
+    }
+    
+    footer {
+        display: flex;
+        justify-content: flex-start;    
+        height: 150px;
+        max-width: 100%;
+        overflow: hidden;
+        background-color: $jBlack;
+    }
+
+    .footer-nav { 
+        display: none;
+    }
+    
+    #footerLogo {
+        position: absolute;
+        top: 0;
+        max-width: 12vh;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    
+    #hamButton {
+        display: none;
+    }
+    
+    #mainNav {
+        width: 90%;
+        margin: 0 auto;
+        position: absolute;
+        bottom: 2.5%;
+        left: 3%;
+    }
+    
+    #logoCon {
+        position: absolute;
+        top: 24%;
+        left: 36%;
+        right: auto;
+    }
+    
+    #video-bg{
+        height: 860px;
+    }
+    
+    #logoCon {
+    max-width: 25%;
+    z-index: 1;
+    }
+    
+    #artists {
+    width: 100%;
+    height: 1360px;
+    background: linear-gradient(90deg, #d53369 0%, #daae51 100%);
+    }
+
+    #artistsCon {
+    margin: 90px 10% -1em;
+    width: 70%;
+    height: 900px;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 350px 350px 350px 350px;
+    grid-row-gap: 15%;
+    grid-column-gap: 5%;
+    }
+    
+    .pressKit {
+        text-decoration: none;
+    }
+
+    #releases {
+    height: 1260px;
+    background-color: #1f1f1f;
+    max-width: 80%;
+    margin: 0px 14% -1em;
+    padding-bottom: 60px;    
+    }
+
+    #releasesCon{
+    margin: 90px 10% -1em;
+    width: 80%;
+    display: grid;
+    grid-template-columns: 25% 25% 25%;
+    grid-template-rows: 200px 200px 200px 200px;
+    grid-row-gap: 5%;
+    grid-column-gap: 10%;
+    }
+
+    .albumCon {
+    width: 25vh;
+    }
+
+    .imgArtists{
+    width: 200px;
+    height: 200px;
+    }
+
+    #about {
+    max-width: 100%;
+    margin: 0px 0% -1em;    
+    height: 690px;
+    background-color: #000;
+    }
+
+    #aboutCon{
+        margin: 45px 6.5% -2em;
+        width: 90%;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: 1fr;
+        grid-row-gap: 5%;
+        grid-column-gap: 10%;
+    }
+    
+    #aboutImg {
+        max-width: 400px;
+    }
+
+    .hAlign {
+        margin-left: 10%;
+        padding-top: 90px;
+    }
+    
+    .sectionSpacing {
+        margin-top: 60px;
+        margin-bottom: 60px;
+    }
+    
+    #footer {    
+        height: 150px;
+        max-width: 100%;
+        overflow: hidden;
+        background-color: $jBlack;
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: 1fr;    
+    }
+
+    .footer-nav {
+        list-style: none;  
+        display: flex;
+        justify-content: space-between;
+        width: 40%;
+    }
+    
+    #footerLogo {
+        position: relative;
+        top: 0;
+        left: 0;
+        max-width: 12vh;
+    }
+    
+    
+}
+
+@media screen and (min-width: 1200px) {
+    
+    #hamButton {
+        display: none;
+    }
+    
+    #mainNav {
+        width: 90%;
+        margin: 0 auto;
+        position: absolute;
+        bottom: 2.5%;
+        left: 3%;
+    }
+    
+    #logoCon {
+        position: absolute;
+        top: 24%;
+        left: 36%;
+        right: auto;
+    }
+    
+    #video-bg{
+        height: 860px;
+    }
+    
+    #logoCon {
+    max-width: 25%;
+    z-index: 1;
+    }
+    
+    #artists {
+    width: 100%;
+    height: 1360px;
+    background: linear-gradient(90deg, #d53369 0%, #daae51 100%);
+    }
+
+    #artistsCon {
+    margin: 90px 10% -1em;
+    width: 70%;
+    height: 900px;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 350px 350px 350px 350px;
+    grid-row-gap: 20%;
+    grid-column-gap: 2%;
+    }
+    
+    .pressKit {
+        text-decoration: none;
+    }
+
+    #releases {
+    height: 1700px;
+    background-color: #1f1f1f;
+    max-width: 80%;
+    margin: 0px 14% -1em;
+    padding-bottom: 60px;
+    }
+
+    #releasesCon{
+    margin: 90px 8% -1em;
+    width: 80%;
+    display: grid;
+    grid-template-columns: 25% 25% 25%;
+    grid-template-rows: 300px 300px 300px 300px;
+    grid-row-gap: 5%;
+    grid-column-gap: 10%;
+    }
+
+    .albumCon {
+    width: 35vh;
+    }
+
+    .imgArtists{
+    width: 250px;
+    height: 250px;
+    }
+
+    #about {
+    max-width: 100%;
+    margin: 0px 4% -1em;    
+    height: 690px;
+    background-color: #000;
+    }
+
+    #aboutCon{
+        margin: 45px 6.5% -2em;
+        width: 90%;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: 2fr;
+        grid-row-gap: 5%;
+        grid-column-gap: 10%;
+    }
+    
+    #aboutImg {
+        max-width: 400px;
+    }
+
+    .hAlign {
+        margin-left: 10%;
+        padding-top: 90px;
+    }
+    
+    .sectionSpacing {
+        margin-top: 60px;
+        margin-bottom: 60px;
+    }
+    
+    #footer {    
+        height: 150px;
+        max-width: 100%;
+        overflow: hidden;
+        background-color: $jBlack;
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: 1fr;    
+    }
+
+    .footer-nav {
+        list-style: none;  
+        display: flex;
+        justify-content: space-between;
+        width: 40%;
+    }
+    
+    #footerLogo {
+        position: relative;
+        top: 0;
+        left: 0;
+        max-width: 12vh;
+    }
+    
+    
+}
